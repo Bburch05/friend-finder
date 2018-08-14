@@ -1,16 +1,12 @@
-
-
-  module.exports = (function() {
-    'use strict';
+var path = require("path");
     var htmlRoutes = require('express').Router();
 
     htmlRoutes.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "index.html"));
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
       
-    htmlRoutes.get("/tables", function(req, res) {
-        res.sendFile(path.join(__dirname, "wait.html"));
+    htmlRoutes.get("/survey", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    return htmlRoutes;
-})();
+module.exports = htmlRoutes

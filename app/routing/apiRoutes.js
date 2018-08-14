@@ -1,35 +1,48 @@
-module.exports = (function() {
-    'use strict';
+var path = require("path");
+var friendData = require("../data/friends.js")
+
 
     var apiRoutes = require('express').Router();
-    apiRoutes.get("/api/tables", function(req, res) {
-        return res.json(tables);
+    apiRoutes.get("/api/friends", function(req, res) {
+        res.json(friendData);
       });
-    
-      apiRoutes.post("/api/tables", function(req, res) {
-        // req.body hosts is equal to the JSON post sent from the user
-        // This works because of our body-parser middleware
+
+    apiRoutes.post("/api/friends", function(req, res) {
         var body = req.body;
-        var newTable = new Table(
-            body.customerName,
-            body.customerEmail,
-            body.customerPhone, 
-            body.customerID);
-        if (tables.length <= 4){
-            tables.push(newTable);
-            var reserved = true;
-            res.send(reserved);
-            console.log(res)
-        }
-        else{
-            wait.push(newTable);
-            var reserved = false;
-            res.send(reserved)
-        }
-        console.log(newTable);
+        var differenceArray = [];
+        var friendID;
+        var nearDiff = 51;
+
+        friendData.forEach(function(data,index){
+            var friendName = data.name;
+            var friendScores = data.scores;
+            var userScores = body.scores;
+            differenceArray = [];
+            var difValue = 0;
+
+            for(var i = 0; i < friendScores.length; i++){
+                differenceArray.push(Math.abs( parseInt(friendScores[i]) - parseInt(userScores[i]) ))
+            }
+
+            differenceArray.forEach(function(data){
+                difValue += data;
+            })
+
+            if(difValue < nearDiff){
+                nearDiff = difValue;
+                friendID = index;
+            }
+        });
+            var match = {
+                    name: friendData[friendID].name,
+                    photo: friendData[friendID].photo
+                };
+                console.log(match);
+                res.json(match)
+            friendData.push(body)
+
       });
-    return apiRoutes;
-})();  // Displays all characters
- 
+
+module.exports = apiRoutes
  
  

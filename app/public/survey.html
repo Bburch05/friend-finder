@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Friend Finder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h1>Survey Questions</h1>
+            <hr>
+            <form>
+                <div class="form-group">
+                    <label for="name">Enter Your Name (Required)</label>
+                    <input type="text" class="form-control" name="photo" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="photo">Enter a Photo URL (Required)</label>
+                    <input type="text" class="form-control" name="photo" id="photo">
+                </div>
+                <div class="form-group">
+                    <label for="q1">I enjoy video games.</label>
+                    <select class="form-control" id="q1">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q2">I enjoy dogs.</label>
+                    <select class="form-control" id="q2">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q3">I enjoy cats.</label>
+                    <select class="form-control" id="q3">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q4">I feel like I'm improving all the time</label>
+                    <select class="form-control" id="q4">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q5">My favorite language is Javascript.</label>
+                    <select class="form-control" id="q5">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q6">I enjoy games of Strategy</label>
+                    <select class="form-control" id="q6">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q7">I enjoy games of chance</label>
+                    <select class="form-control" id="q7">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q8">I enjoy card games.</label>
+                    <select class="form-control" id="q8">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q9">The Universe is slowly dying and there's nothing that I can do to stop it.</label>
+                    <select class="form-control" id="q9">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="q10">Burp?</label>
+                    <select class="form-control" id="q10">
+                        <option value="1">1 - Highly Disagree</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Neither Agree or Disagree</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highly Agree</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitFriend">Submit</button>
+            </form>
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./api/friends">View API</a>
+                </div>
+                <div class = "col-md-3">
+                        <div class="match">
+                                <h1>Your match is:</h1>
+                                <div id="matchName"></div>
+                                <div id="matchPhoto"></div>
+                            </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        <script>
+            $(".match").hide();
+            $("#submitFriend").on("click", function (event) {
+                event.preventDefault();
+            var userName = $("#name").val().trim();
+            var userPhoto = $("#photo").val().trim();
+            if(userName && userPhoto){
+                var friendData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        parseInt($("#q1").val()),
+                        parseInt($("#q2").val()),
+                        parseInt($("#q3").val()),
+                        parseInt($("#q4").val()),
+                        parseInt($("#q5").val()),
+                        parseInt($("#q6").val()),
+                        parseInt($("#q7").val()),
+                        parseInt($("#q8").val()),
+                        parseInt($("#q9").val()),
+                        parseInt($("#q10").val())
+                    ]
+                };
+                $.post("/api/friends", friendData, function (data) {
+                    $("#matchName").html("<h6>" + data.name + "</h6>")
+                    $("#matchPhoto").html("<img class='img-thumbnail' src=" + data.photo + "/>")
+                    $(".match").show();
+
+                },"json")}
+                else{
+                    alert("Please fill all fields.")
+                }
+
+
+            })
+
+        </script>
+
+
+</body>
+
+</html>
